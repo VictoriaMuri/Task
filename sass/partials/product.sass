@@ -1,0 +1,187 @@
+.product-cards
+    &__item
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        align-items: center
+        margin-right: 15px
+        position: relative
+        .prices
+            display: flex
+            flex-direction: row
+            align-items: center
+        &-img
+            margin-right: 20px
+            cursor: pointer
+        &-description
+            height: 145px
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            &-name
+                cursor: pointer
+            &-type
+                font-size: 13px
+                color: #ACB8CA
+            &-price
+                margin-right: 10px
+                font-size: 20px
+            &-old-price
+                font-size: 13px
+                color: #ACB8CA
+                text-decoration: line-through
+        .cross
+            position: absolute
+            top: 0
+            right: 0
+            cursor: pointer
+    &__buttons
+        .btn-rubbish
+            margin-right: 20px
+            background-color: #000
+            color: #fff
+            padding: 10px 20px
+            border: none
+            border-radius: 10px
+            cursor: pointer
+            width: 102px
+            &:hover
+                background-color: #5e5e5e
+        .btn-oneclick
+            background-color: none
+            background: none
+            border: none
+            font-size: 14px
+            font-weight: bold
+            position: relative
+            cursor: pointer
+            width: 132px
+            &:hover
+                color: #5e5e5e
+            img
+                margin-bottom: -3px
+.products-flex
+    width: 100%
+    display: flex
+    flex-wrap: nowrap
+    justify-content: space-between
+    align-items: center
+    
+@media only screen and (max-width: 1500px)
+    .product-cards__item
+        flex-direction: column
+    .table-parameters-product
+        width: 254px
+    .product-cards__item-img
+            height: 170px
+    .comparison__header
+        align-items: start
+    .comparison__header, .table .table-flex
+        margin-right: 10px
+
+@media only screen and (max-width: 1050px)
+    .product-cards__buttons
+        display: flex
+        flex-direction: column
+    .btn-rubbish
+        margin-bottom: 20px
+    .product-cards__item-description
+        height: 180px
+
+@media only screen and (max-width: 1010px)
+    .product-cards__item
+        width: 200px
+    .table-parameters-product, .products-flex .table-parameters-item-name
+        width: 200px
+
+
+@media only screen and (max-width: 830px)
+    .comparison__footer-buttons
+        button
+            margin-bottom: 0px
+    .comparison__header
+        flex-direction: column
+    .filter
+        margin-bottom: 20px
+    .table-flex
+        flex-wrap: wrap
+        border-top: 1px solid #b9b9b9   
+        padding-top: 20px
+    .table-parameters-item
+        position: relative
+        width: auto
+        .table-parameters-item-name
+            width: auto
+        &:after
+            content: ''
+            position: absolute
+            background: url('../img/svg/arrow-down.svg') no-repeat
+            width: 20px
+            height: 10px
+            right: -30px
+            bottom: 5px
+    .sub-parameters 
+        .table-parameters-item
+            &:after
+                background: none
+        > .table-parameters-item
+            > .table-parameters-item-name
+                position: relative
+                display: initial
+                &:after
+                    content: ''
+                    position: absolute
+                    background: url('../img/svg/arrow-down.svg') no-repeat
+                    width: 20px
+                    height: 10px
+                    right: -30px
+                    bottom: 5px
+    .sub-parameters
+        border-top: 1px solid #b9b9b9
+        padding-top: 20px
+        .table-flex
+            border: none
+        .table-sub-parameters-item
+            padding-left: 0px
+        
+
+
+
+@media only screen and (max-width: 530px)
+    .product-cards__item
+        width: 170px
+        &-description
+            &-name
+                font-size: 14px
+    .btn-rubbish
+        position: relative
+        width: 120px !important
+        text-align: right
+        &:before
+            background: url('../img/svg/rubbish.svg')
+            content: ''
+            position: absolute
+            width: 20px
+            height: 20px
+            left: 10px
+            bottom: 8px
+    .table-parameters-item-name
+        display: initial
+
+@media only screen and (max-width: 430px)
+    .product-cards__item
+        width: 125px
+        &-img
+            img
+                width: 110px
+    .table-parameters-item-name_bonus
+        font-size: 10px
+    .product-cards__item-description-price
+        font-size: 14px
+    .product-cards__item-description-name
+        font-size: 12px
+    .btn-oneclick
+        display: none
+    .header
+        height: 170px
+        text-align: center
